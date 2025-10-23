@@ -9,10 +9,12 @@
 
   Placeholder : levée d'erreur pour indiquer que l'exercice doit être implémenté.
 */
-function saluer(nom) {
+function saluer(nom = "inconnu") {
   // Exercice non implémenté : afficher Bonjour, [nom] ou Bonjour, inconnu
   // Placeholder neutre : ne fait rien et retourne undefined.
+  console.log(`Bonjour, ${nom}`);
 }
+saluer()
 
 // Ne pas modifier la ligne ci-dessous
 module.exports = { saluer }
