@@ -13,8 +13,17 @@
 function max(a, b) {
   // Exercice non implémenté : retourner le plus grand ou un message si égaux
   // Placeholder neutre : retourne null pour indiquer non-implémentation
-  return null;
+  if (arguments.length !== 2) return null;
+
+  if (typeof a !== 'number' || typeof b !== 'number') return null;
+  if (isNaN(a) || isNaN(b)) return null;
+
+  if (a === b) return "Les deux nombres sont égaux";
+  return a > b ? a : b;
 }
+console.log("max(9,4 ) =", max(9, 5));
+console.log("max(8, 8) =", max(8, 8));
+console.log("max('9', 5) =", max("9", 5));
 
 // Ne pas modifier la ligne ci-dessous
 module.exports = { max }
